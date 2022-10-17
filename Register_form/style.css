@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .header {
+    background-color: #b1afff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+  }
+  
+  .header .logo {
+    float: center;
+    width: 0%;
+  }
+  
+  .header .logo img {
+    margin: auto;
+    width: 100px;
+    padding: 5px;
+  }
+  
+  .header .nav {
+    width: 100%;
+    float: center;
+  }
+  .header .nav h1 {
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  body {
+    background: #fdfdbd;
+    padding: 10px 0;
+  }
+  
+  .wrapper {
+    max-width: 500px;
+    width: 100%;
+    background: #c8ffd4;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .wrapper .title {
+    font-size: 40px;
+    outline-width: 10px;
+  
+    color: rgba(63, 121, 163, 0.542);
+    font-style: italic;
+    height: 700;
+    bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 250;
+  }
+  
+  .wrapper .form {
+    width: 100%;
+  }
+  .wrapper .form .input_field {
+    margin-bottom: -1px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .wrapper .form .input_field label {
+    width: 100px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .wrapper .form .input_field .input,
+  .wrapper .form .input_field {
+    width: 100%;
+    outline: none;
+    border: 1px solid #757575 transparent;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  .wrapper .form .input_field {
+    resize: none;
+    height: 125px;
+  }
+  
+  .wrapper .form .input_field .custom_select {
+    position: auto;
+    width: 100px;
+    height: 37px;
+  }
+  
+  .wrapper .form .input_field .custom_select select {
+    -webkit-appearance: black;
+    appearance: black;
+    border: 1px solid #d5dbd9;
+    width: fit-content;
+    height: 100%;
+    padding: 10px 10px;
+    border-radius: none;
+    outline: none;
+  }
+  
+  .wrapper .form .input_field .custom_select:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 8px solid;
+    border-color: #b8e8fc transparent transparent;
+    pointer-events: none;
+  }
+  
+  .wrapper .form .input_field .input:focus,
+  .wrapper .form .input_field:focus,
+  .wrapper .form .input_field:focus {
+    border: 1px solid #040809;
+  }
+  
+  .wrapper .form .input_field .check {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .wrapper .form .input_field .check input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .wrapper .form .input_field .check .checkmark {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #11c143;
+    display: block;
+    position: relative;
+    background: red transparent;
+  }
+  
+  .wrapper .form .input_field .check .checkmark:before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 5px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent rgb(157, 10, 10) #fff #ffff;
+    transform: rotate(-45deg);
+  }
+  
+  .wrapper .form .input_field .check input[type="checkbox"]:checked ~ .checkmark {
+    background: #2506f1;
+  }
+  .wrapper .form .input_field .check input[type="checkbox"]:checked ~ .checkmark::before {
+    display: block;
+  }
+  
+  .wrapper .form .input_field .button {
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    border: 0;
+    background: #7023b3;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+  }
+  
+  .wrapper .form .input_field:last-child {
+    margin-bottom: 0;
+  }
+  .wrapper .form .input_field .button:hover {
+    background: #389d2f;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer {
+    background-color: #b8e8fc;
+    clear: both;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  @media (max-width: 420px) {
+    nav h1 {
+      display: flex;
+    }
+    .wrapper .form .input_field {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .wrapper .form .input_field label {
+      margin-bottom: 5px;
+    }
+    .wrapper .form .input_field .terms {
+      flex-direction: row;
+    }
+    .header {
+      flex-direction: column;
+    }
+    .header .nav h1 {
+      flex-direction: row;
+    }
+    .footer {
+      flex-direction: row;
+    }
+    .wrapper .form .input_field .check .checkmark {
+      flex-direction: row;
+    }
+    .wrapper .form .input_field .custom_select select {
+      flex-direction: row;
+    }
+    select option {
+      font-size: 24px;
+    }
+    .logo {
+        display: none;
+        }
+  }
